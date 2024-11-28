@@ -35,7 +35,7 @@ function handleCellClick(e) {
         cell.textContent = currentPlayer;
 
         if (checkWin()) {
-            messageDiv.textContent = `${currentPlayer === 'x' ? player1 : player2}, congratulations you won!`;
+            messageDiv.textContent = `${currentPlayer === 'x' ? player1 : player2} congratulations you won!`;
             board.removeEventListener('click', handleCellClick);
         } else if (gameState.includes('')) {
             currentPlayer = currentPlayer === 'x' ? 'o' : 'x'; // Toggle between lowercase 'x' and 'o'
